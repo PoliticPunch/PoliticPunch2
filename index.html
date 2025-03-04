@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PoliticPunch</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Fight Club</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #1a1a1a; }
+        canvas { display: block; }
+        #ui { position: absolute; top: 10px; left: 10px; color: white; font-family: Arial; font-size: 16px; }
+        .health-bar { width: 200px; height: 20px; background: #333; border: 2px solid #fff; margin: 5px 0; }
+        .health { height: 100%; transition: width 0.3s; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>PoliticPunch</h1>
-        <div id="fight-zone">
-            <div class="fighter" id="fighter1">
-                <h2><span id="f1-name">???</span></h2>
-            </div>
-            <div class="fighter" id="fighter2">
-                <h2><span id="f2-name">???</span></h2>
-            </div>
-        </div>
-        <p id="punch-line">Pick two fighters and punch!</p>
-        <button id="punch-btn" disabled>PUNCH!</button>
-        <div class="select-zone">
-            <select id="f1-select">
-                <option value="">Fighter 1</option>
-                <option value="Trump">Trump</option>
-                <option value="JDVance">JD Vance</option>
-                <option value="Zelensky">Zelensky</option>
-                <option value="Putin">Putin</option>
-                <option value="KingCharles">King Charles</option>
-                <option value="Macron">Macron</option>
-            </select>
-            <select id="f2-select">
-                <option value="">Fighter 2</option>
-                <option value="Trump">Trump</option>
-                <option value="JDVance">JD Vance</option>
-                <option value="Zelensky">Zelensky</option>
-                <option value="Putin">Putin</option>
-                <option value="KingCharles">King Charles</option>
-                <option value="Macron">Macron</option>
-            </select>
-        </div>
-        <button id="reset-btn">Reset</button>
+    <div id="ui">
+        <div>Player 1 (Red): WASD + Space (Punch), Q (Kick)</div>
+        <div class="health-bar"><div id="p1-health" class="health" style="width: 100%; background: #ff0000;"></div></div>
+        <div>Player 2 (Blue): Arrows + Enter (Punch), Shift (Kick)</div>
+        <div class="health-bar"><div id="p2-health" class="health" style="width: 100%; background: #0000ff;"></div></div>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
