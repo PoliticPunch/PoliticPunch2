@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PoliticPunch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PoliticPunch</h1>
+        <div id="fight-zone">
+            <div class="fighter" id="fighter1">
+                <h2><span id="f1-name">???</span></h2>
+            </div>
+            <div class="fighter" id="fighter2">
+                <h2><span id="f2-name">???</span></h2>
+            </div>
+        </div>
+        <p id="punch-line">Pick two fighters and punch!</p>
+        <button id="punch-btn" disabled>PUNCH!</button>
+        <div class="select-zone">
+            <select id="f1-select">
+                <option value="">Fighter 1</option>
+                <option value="Trump">Trump</option>
+                <option value="JDVance">JD Vance</option>
+                <option value="Zelensky">Zelensky</option>
+                <option value="Putin">Putin</option>
+                <option value="KingCharles">King Charles</option>
+                <option value="Macron">Macron</option>
+            </select>
+            <select id="f2-select">
+                <option value="">Fighter 2</option>
+                <option value="Trump">Trump</option>
+                <option value="JDVance">JD Vance</option>
+                <option value="Zelensky">Zelensky</option>
+                <option value="Putin">Putin</option>
+                <option value="KingCharles">King Charles</option>
+                <option value="Macron">Macron</option>
+            </select>
+        </div>
+        <button id="reset-btn">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
